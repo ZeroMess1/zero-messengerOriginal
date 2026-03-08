@@ -1,31 +1,41 @@
 {
-  "name": "react-vite-tailwind",
+  "name": "zero-messenger",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "android": "npx cap sync android && npx cap open android",
+    "android:build": "npx cap sync android && cd android && ./gradlew assembleDebug",
+    "android:release": "npx cap sync android && cd android && ./gradlew assembleRelease"
   },
   "dependencies": {
-    "clsx": "2.1.1",
-    "date-fns": "^4.1.0",
-    "firebase": "^12.10.0",
-    "lodash.debounce": "^4.0.8",
-    "react": "19.2.3",
-    "react-dom": "19.2.3",
-    "tailwind-merge": "3.4.0"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "firebase": "^10.7.1",
+    "@capacitor/core": "^6.0.0",
+    "@capacitor/cli": "^6.0.0",
+    "@capacitor/android": "^6.0.0",
+    "date-fns": "^3.0.6",
+    "clsx": "^2.1.0",
+    "lucide-react": "^0.303.0"
   },
   "devDependencies": {
-    "@tailwindcss/vite": "4.1.17",
-    "@types/node": "^22.0.0",
-    "@types/react": "19.2.7",
-    "@types/react-dom": "19.2.3",
-    "@vitejs/plugin-react": "5.1.1",
-    "tailwindcss": "4.1.17",
-    "typescript": "5.9.3",
-    "vite": "7.2.4",
-    "vite-plugin-singlefile": "2.3.0"
+    "@types/react": "^18.2.43",
+    "@types/react-dom": "^18.2.17",
+    "@typescript-eslint/eslint-plugin": "^6.14.0",
+    "@typescript-eslint/parser": "^6.14.0",
+    "@vitejs/plugin-react": "^4.2.1",
+    "eslint": "^8.55.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.5",
+    "typescript": "^5.2.2",
+    "vite": "^5.0.8",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.32",
+    "tailwindcss": "^3.4.0"
   }
 }
